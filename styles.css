@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+    --azul-aviacao: #1E3A8A;
+    --azul-claro: #3B82F6;
+    --cinza-metalico: #6B7280;
+    --branco: #FFFFFF;
+    --preto: #000000;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Modo de alto contraste */
+body.alto-contraste {
+    background-color: var(--preto) !important;
+    color: var(--branco) !important;
+}
+
+body.alto-contraste * {
+    background-color: var(--preto) !important;
+    color: var(--branco) !important;
+    border-color: var(--branco) !important;
+}
+
+body.alto-contraste .btn-primary {
+    background-color: var(--branco) !important;
+    color: var(--preto) !important;
+    border-color: var(--branco) !important;
+}
+
+body.alto-contraste .formulario {
+    background-color: var(--cinza-metalico) !important;
+}
+
+header {
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-text {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--azul-aviacao);
+    font-size: 2rem;
+    margin: 0;
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+.nav-link {
+    color: var(--azul-aviacao);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--azul-claro);
+    transform: translateY(-2px);
+}
+
+.inicio-fundo {
+    background: linear-gradient(135deg, var(--azul-aviacao) 0%, var(--azul-claro) 100%);
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.inicio-fundo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="clouds" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="3" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23clouds)"/></svg>');
+    opacity: 0.3;
+}
+
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 45rem;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-principal {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.botao-inicio {
+    background: linear-gradient(45deg, var(--azul-claro), var(--azul-aviacao));
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    align-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.botao-inicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.display-4 {
+    text-shadow: -3px 3px 0 var(--azul-claro);
+}
+
+#sobre-aviacao {
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
+    border-radius: 20px;
+}
+
+#sobre-aviacao .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--azul-aviacao);
+    font-weight: 700;
+}
+
+#galeria {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    padding: 4rem 0;
+}
+
+.fundo-galeria {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: var(--azul-aviacao);
+    font-weight: 700;
+}
+
+#contato {
+    background: linear-gradient(135deg, var(--azul-aviacao) 0%, var(--azul-claro) 100%);
+    padding: 4rem 0;
+    position: relative;
+}
+
+#contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+
+.formulario {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.formulario button {
+    background: linear-gradient(45deg, var(--azul-aviacao), var(--azul-claro));
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 58, 138, 0.4);
+}
+
+.form-control {
+    background-color: #F1F5F9;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--branco);
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    background: linear-gradient(45deg, var(--azul-aviacao), var(--azul-claro)) !important;
+    border: none !important;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    background: linear-gradient(45deg, var(--azul-aviacao), var(--azul-claro)) !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.opcoes-acessibilidade button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 3px 10px rgba(30, 58, 138, 0.4);
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--azul-aviacao) 0%, var(--azul-claro) 100%);
+    color: var(--branco);
+    padding: 2rem 0;
+}
+
+footer i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+footer i:hover {
+    transform: translateY(-3px);
+    color: #FCD34D;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .img-inicio {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        margin-top: 2rem;
+    }
+    
+    .inicio-fundo {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+    
+    #sobre-aviacao .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #sobre-aviacao .col-4,
+    #sobre-aviacao .col-5 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Melhorias de acessibilidade */
+.btn:focus,
+.form-control:focus {
+    outline: 3px solid var(--azul-claro);
+    outline-offset: 2px;
+}
+
+/* Skip link para navegação por teclado */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--azul-aviacao);
+    color: var(--branco);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1001;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+

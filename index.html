@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Mundo da Aviação</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="p-5">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <div class="logo-container">
+                <h1 class="logo-text">✈️ Aviação</h1>
+            </div>
+            <ul class="nav mt-5">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-primary rotacao-botao fw-bold" 
+                        aria-label="Menu de acessibilidade">Acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista" role="menu">
+                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" 
+                            aria-label="Aumentar tamanho da fonte">A +</button>
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" 
+                            aria-label="Diminuir tamanho da fonte">A -</button>
+                    <button id="alto-contraste" class="btn btn-primary fw-bold" 
+                            aria-label="Ativar alto contraste">Contraste</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="inicio" class="my-5">
+            <div class="inicio-fundo d-flex justify-content-between align-items-center">
+                <div class="esquerda-conteudo">
+                    <h1 class="display-4 text-white fst-italic fw-bold">Bem-vindos ao</h1>
+                    <div class="logo-principal mb-3">
+                        <h2 class="titulo-principal text-white">Mundo da Aviação</h2>
+                    </div>
+                    <a href="#sobre-aviacao" class="btn btn-primary btn-lg botao-inicio fw-semibold">Decolar!</a>
+                </div>
+                <img src="img/201001-microsoft-flight-simulator-dynamic-weather-ew-1249p.jpg"
+                    alt="Avião voando sobre paisagem montanhosa com céu azul e nuvens"
+                    title="Avião em voo - Simulador de voo Microsoft" class="img-fluid img-inicio">
+            </div>
+        </section>
+
+        <section id="sobre-aviacao" class="my-5 pt-6 secao-aviacao">
+            <div class="container d-flex align-items-center">
+                <div class="col-4 d-flex justify-content-center">
+                    <img src="img/21615982-esboco-aviao-aeronave-projeto-aviao-projeto-vetor.jpg" 
+                         class="rounded-pill" 
+                         alt="Diagrama técnico de avião mostrando diferentes vistas e componentes" 
+                         width="273" height="331" loading="lazy">
+                </div>
+                <div class="col-5">
+                    <h2>O Fascinante Mundo da Aviação</h2>
+                    <p class="p-2">A aviação representa uma das maiores conquistas da humanidade, transformando a forma como nos conectamos com o mundo. Desde o histórico voo de Santos Dumont com o 14-Bis em 1906, considerado o primeiro voo público de um avião, até os modernos jatos comerciais e aeronaves militares de última geração, a evolução da aviação continua a nos surpreender. Explore conosco a história, a tecnologia e o futuro dos céus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2 class="text-center pt-5">Galeria de Aeronaves</h2>
+            <div class="container p-3 mt-3 fundo-galeria">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/AZUL-CONECTA-CESSNA-GRAND-CARAVAN-FOTO-LUIS-ALBERTO-NEVES.jpg"
+                                class="card-img-top img-fluid rounded-5" loading="lazy"
+                                alt="Cessna Grand Caravan da Azul Conecta em voo">
+                            <div class="card-body">
+                                <h5 class="card-title">Cessna Grand Caravan</h5>
+                                <p class="card-text">Aeronave comercial regional utilizada para conectar pequenas cidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/Airbus_A380_Cockpit.jpg" 
+                                class="card-img-top img-fluid rounded-5" loading="lazy"
+                                alt="Cockpit do Airbus A380 com pilotos operando os controles">
+                            <div class="card-body">
+                                <h5 class="card-title">Cockpit Airbus A380</h5>
+                                <p class="card-text">Interior da cabine de comando do maior avião de passageiros do mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-md-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/download.jpg" 
+                                class="card-img-top img-fluid rounded-5" loading="lazy"
+                                alt="Hidroavião histórico pousado na água">
+                            <div class="card-body">
+                                <h5 class="card-title">Hidroavião Histórico</h5>
+                                <p class="card-text">Aeronave anfíbia capaz de pousar tanto em terra quanto na água.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="img/cutaway_Legacy500.webp" 
+                                class="card-img-top img-fluid rounded-5" loading="lazy"
+                                alt="Diagrama cutaway do jato executivo Legacy 500 da Embraer">
+                            <div class="card-body">
+                                <h5 class="card-title">Embraer Legacy 500</h5>
+                                <p class="card-text">Jato executivo brasileiro com tecnologia de ponta e design inovador.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container p-5 d-flex justify-content-center">
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
+                    <h2 class="mb-3">Entre em contato</h2>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
+                                placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
+                                placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
+                                placeholder="Escreva sua mensagem" required></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
+                                mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-3 fst-italic">
+        <p>Conecte-se conosco:</p>
+        <i class="bi bi-whatsapp" aria-label="WhatsApp"></i>
+        <i class="bi bi-instagram" aria-label="Instagram"></i>
+        <i class="bi bi-tiktok" aria-label="TikTok"></i>
+        <p class="mt-3">Desenvolvido com paixão pela aviação. Projeto educativo sem fins comerciais.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
